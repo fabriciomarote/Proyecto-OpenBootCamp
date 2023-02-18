@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import TaskListComponent from './components/container/task_list';
-import Greeting from './components/pure/greeting'
+import Greeting from './components/pure/greeting';
 import Greetingf from './components/pure/greetingF';
-import ContactListComponent from './components/container/contact';
+import ContactComponent from './components/pure/contact';
+import { Contact } from './/models/contact.class';
 
 function App() {
   return (
@@ -12,8 +13,8 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         {/*<Greeting name={'Fabricio'}></Greeting>*/}
         {/*<Greetingf name={'Fabricio'}></Greetingf>*/}
-        <ContactListComponent></ContactListComponent>
         {/*<TaskListComponent></TaskListComponent>*/}
+        <ContactComponent contact={new Contact("Alejandro", "Britez", "alebritez@gmail.com", true)}></ContactComponent>
       </header>
     </div>
   );

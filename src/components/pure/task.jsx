@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Task } from '../../models/task.class';
 
-const TaskComponent = ( props ) => {
-
-    const { task } = props;
+const TaskComponent = ({task}) => {
 
     return (
         <div>
@@ -16,5 +14,8 @@ const TaskComponent = ( props ) => {
     );
 };
 
+TaskComponent.propTypes = {
+    task: PropTypes.instanceOf(Task)
+};
 
 export default TaskComponent;
