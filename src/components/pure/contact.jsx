@@ -15,7 +15,7 @@ const ContactComponent = ({ contact }) => {
             <h4> Nombre: { contact.nombre } </h4>
             <h4> Apellido: { contact.apellido } </h4>
             <h4> Email: { contact.email } </h4>
-            <h4> Tu estado es: { conected ? "EN LINEA" : "NO DISPONIBLE" } </h4>
+            <h4> { conected ? "CONTACTO EN LINEA" : "CONTACTO NO DISPONIBLE" } </h4>
             <button onClick={changeConected}>Cambiar estado</button>
         </div>
     );
