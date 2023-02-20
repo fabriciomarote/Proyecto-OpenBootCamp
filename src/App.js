@@ -12,15 +12,15 @@ import Example4 from './hooks/example4';
 import GreetingStyled from './components/pure/greetingStyled';
 import Clock from './hooks/lifeCycle/Clock'
 import ClockFuncional from './hooks/lifeCycle/ClockFuncional';
+import Father from './components/container/father';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      {/*<header className="App-header">*/}
+        {/*<img src={logo} className="App-logo" alt="logo" />*/}
         {/*<Greeting name={'Fabricio'}></Greeting>*/}
         {/*<Greetingf name={'Fabricio'}></Greetingf>*/}
-        {/*<TaskListComponent></TaskListComponent>*/}
         {/*<ContactComponent contact={new Contact("Alejandro", "Britez", "alebritez@gmail.com", true)}></ContactComponent>*/}
         {/*<Example1></Example1>*/}
         {/*<Example2></Example2>*/}
@@ -30,8 +30,10 @@ function App() {
         </Example4>*/}
         {/*<GreetingStyled name='Fabricio'></GreetingStyled>*/}
         {/*<Clock></Clock>*/}
-        <ClockFuncional></ClockFuncional>
-      </header>
+        {/*<ClockFuncional></ClockFuncional>*/}
+        <TaskListComponent></TaskListComponent>
+        {/*<Father></Father>*/}
+     {/* </header>*/}
     </div>
   );
 }
