@@ -1,28 +1,43 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Contact } from '../../models/contact.class';
+import '../styles/contact.scss'
 
-const ContactComponent = ({ contact }) => {
+const ContactComponent = ({ contact, state, remove}) => {
 
-    const [conected, setConected] = useState(contact.conectado);
-
-    const changeConected = () => {
-        setConected(!conected);
+    const contactIconState = () => {
+        if(contact.conectado) {
+            return (<i onClick={() => state(contact)} className='bi-toggle-on contact-action' style={{color: 'green'}}>Conectado</i>) 
+        } else {
+            return (<i onClick={() => state(contact)} className='bi-toggle-off contact-action' style={{color: 'grey'}}>Desconectado</i>)
+        }
     }
 
     return (
-        <div>
-            <h4> Nombre: { contact.nombre } </h4>
-            <h4> Apellido: { contact.apellido } </h4>
-            <h4> Email: { contact.email } </h4>
-            <h4> { conected ? "Contacto En Linea" : "Contacto No Disponible" } </h4>
-            <button onClick={changeConected}>Cambiar estado</button>
-        </div>
+        <tr className='fw-normal'>
+            <td>
+                <span className='ms-1 contact'>{contact.nombre}</span>
+            </td>
+            <td className='align-middle '>
+                <span className='contact'>{contact.apellido}</span>
+            </td>
+            <td className='align-middle'>
+                <span contact>{contact.email}</span>
+            </td>
+            <td className='align-middle'>
+                {contactIconState()}
+            </td>
+            <td className='align-middle'>
+                <i className='bi-trash contact-action' style={{color:'tomato'}} onClick={() => remove(contact)}></i>
+            </td>
+        </tr>
     );
 };
 
 ContactComponent.propTypes = {
-    contact: PropTypes.instanceOf(Contact)
+    contact: PropTypes.instanceOf(Contact),
+    state: PropTypes.func.isRequired,
+    remove: PropTypes.func.isRequired,
 };
 
 export default ContactComponent;

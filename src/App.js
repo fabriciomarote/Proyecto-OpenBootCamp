@@ -13,6 +13,7 @@ import GreetingStyled from './components/pure/greetingStyled';
 import Clock from './hooks/lifeCycle/Clock'
 import ClockFuncional from './hooks/lifeCycle/ClockFuncional';
 import Father from './components/container/father';
+import ContactListComponent from './components/container/contact_list';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         {/*<img src={logo} className="App-logo" alt="logo" />*/}
         {/*<Greeting name={'Fabricio'}></Greeting>*/}
         {/*<Greetingf name={'Fabricio'}></Greetingf>*/}
-        {/*<ContactComponent contact={new Contact("Alejandro", "Britez", "alebritez@gmail.com", true)}></ContactComponent>*/}
+        {/*<ContactComponent></ContactComponent>*/}
         {/*<Example1></Example1>*/}
         {/*<Example2></Example2>*/}
         {/*<MiComponenteConContexto></MiComponenteConContexto>*/}
@@ -31,7 +32,8 @@ function App() {
         {/*<GreetingStyled name='Fabricio'></GreetingStyled>*/}
         {/*<Clock></Clock>*/}
         {/*<ClockFuncional></ClockFuncional>*/}
-        <TaskListComponent></TaskListComponent>
+        {/*<TaskListComponent></TaskListComponent>*/}
+        <ContactListComponent></ContactListComponent>
         {/*<Father></Father>*/}
      {/* </header>*/}
     </div>
