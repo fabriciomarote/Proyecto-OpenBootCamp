@@ -14,6 +14,7 @@ import Clock from './hooks/lifeCycle/Clock'
 import ClockFuncional from './hooks/lifeCycle/ClockFuncional';
 import Father from './components/container/father';
 import ContactListComponent from './components/container/contact_list';
+import OptionalRender from './components/pure/optionalRender';
 
 function App() {
   return (
@@ -33,7 +34,8 @@ function App() {
         {/*<Clock></Clock>*/}
         {/*<ClockFuncional></ClockFuncional>*/}
         {/*<TaskListComponent></TaskListComponent>*/}
-        <ContactListComponent></ContactListComponent>
+        {/*<ContactListComponent></ContactListComponent>*/}
+        <OptionalRender></OptionalRender>
         {/*<Father></Father>*/}
      {/* </header>*/}
     </div>
